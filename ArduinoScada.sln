@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.common", "isct.arduinoscada.common\isct.arduinoscada.common.csproj", "{D386A66E-3635-499D-8936-5DE748F38F8F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.services.config", "isct.arduinoscada.services.config\isct.arduinoscada.services.config.csproj", "{97DCCA4D-DB44-401E-9FEA-F525D481A82D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.ui.config", "isct.arduinoscada.ui.config\isct.arduinoscada.ui.config.csproj", "{8799C734-89A0-48D8-A386-DD5DC1694B52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D386A66E-3635-499D-8936-5DE748F38F8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D386A66E-3635-499D-8936-5DE748F38F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D386A66E-3635-499D-8936-5DE748F38F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D386A66E-3635-499D-8936-5DE748F38F8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97DCCA4D-DB44-401E-9FEA-F525D481A82D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97DCCA4D-DB44-401E-9FEA-F525D481A82D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97DCCA4D-DB44-401E-9FEA-F525D481A82D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97DCCA4D-DB44-401E-9FEA-F525D481A82D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8799C734-89A0-48D8-A386-DD5DC1694B52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8799C734-89A0-48D8-A386-DD5DC1694B52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8799C734-89A0-48D8-A386-DD5DC1694B52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8799C734-89A0-48D8-A386-DD5DC1694B52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
