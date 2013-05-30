@@ -39,7 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entities\config\AlarmType.cs" />
+    <Compile Include="entities\config\EAlarmType.cs" />
     <Compile Include="entities\config\EAlarmTrigger.cs" />
     <Compile Include="entities\config\GenericProperty.cs" />
     <Compile Include="entities\config\ScalationOperation.cs" />
