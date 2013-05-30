@@ -1,0 +1,5 @@
+C:\Code\ArduinoScada\isct.arduinoscada.ui.config\bin\isct.arduinoscada.ui.config.dll
+C:\Code\ArduinoScada\isct.arduinoscada.ui.config\bin\isct.arduinoscada.ui.config.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.ui.config\obj\Debug\isct.arduinoscada.ui.config.csprojResolveAssemblyReference.cache
+C:\Code\ArduinoScada\isct.arduinoscada.ui.config\obj\Debug\isct.arduinoscada.ui.config.dll
+C:\Code\ArduinoScada\isct.arduinoscada.ui.config\obj\Debug\isct.arduinoscada.ui.config.pdb

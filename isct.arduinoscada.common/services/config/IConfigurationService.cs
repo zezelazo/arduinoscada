@@ -3,17 +3,17 @@ using isct.arduinoscada.common.entities.config;
 
 namespace isct.arduinoscada.common.services.config {
   public interface IConfigurationService {
-    long CreateServer(Server item);
-    bool UpdateServer(Server item);
-    bool DeleteServer(Server item);
+    void CreateServer(Server item);
+    void UpdateServer(Server item);
+    void DeleteServer(Server item);
 
     Server GetServerByName(string name);
     IEnumerable<Server> GetServers();
     Server GetServerById(long id);
 
-    long CreateTagdefinition(TagDefinition item);
-    bool UpdateTagdefinition(TagDefinition item);
-    bool DeleteTagdefinition(TagDefinition item);
+    void CreateTagdefinition(TagDefinition item);
+    void UpdateTagdefinition(TagDefinition item);
+    void DeleteTagdefinition(TagDefinition item);
 
     TagDefinition GetTagDefinitionByName(string name);
     IEnumerable<TagDefinition> GetTagDefinitions();

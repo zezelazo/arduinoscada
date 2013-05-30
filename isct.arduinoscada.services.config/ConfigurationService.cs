@@ -8,7 +8,7 @@ using isct.arduinoscada.common.services.config;
 
 namespace isct.arduinoscada.services.config {
   internal class ConfigurationService : IConfigurationService {
-    private IDocumentSession _dao;
+    private readonly IDocumentSession _dao;
 
     #region Constructor
 
@@ -20,21 +20,23 @@ namespace isct.arduinoscada.services.config {
 
     #region Implementation of IConfigurationService
 
-    public long CreateServer(Server item) {
+    public void CreateServer(Server item) {
+       _dao.Store(item);
+       _dao.SaveChanges();
+    }
+
+    public void UpdateServer(Server item) {
       throw new NotImplementedException();
     }
 
-    public bool UpdateServer(Server item) {
-      throw new NotImplementedException();
-    }
-
-    public bool DeleteServer(Server item) {
-      throw new NotImplementedException();
+    public void DeleteServer(Server item) {
+     _dao.Delete(item);
+     _dao.SaveChanges();
     }
 
     public Server GetServerByName(string name) {
-      var server = _dao.Query<Server>().FirstOrDefault(s => string.Compare(s.Name, name, StringComparison.OrdinalIgnoreCase)=0);
-      
+      var server = _dao.Query<Server>().FirstOrDefault(s => string.Compare(s.Name, name, StringComparison.OrdinalIgnoreCase)==0);
+      return server;
 
     }
 
@@ -48,28 +50,33 @@ namespace isct.arduinoscada.services.config {
       return server;
     }
 
-    public long CreateTagdefinition(TagDefinition item) {
+    public void  CreateTagdefinition(TagDefinition item) {
+      _dao.Store(item);
+      _dao.SaveChanges();
+    }
+
+    public void UpdateTagdefinition(TagDefinition item) {
       throw new NotImplementedException();
     }
 
-    public bool UpdateTagdefinition(TagDefinition item) {
-      throw new NotImplementedException();
+    public void DeleteTagdefinition(TagDefinition item) {
+      _dao.Store(item);
+      _dao.SaveChanges();
     }
 
-    public bool DeleteTagdefinition(TagDefinition item) {
-      throw new NotImplementedException();
-    }
-
-    public IEnumerable<TagDefinition> GetTagDefinitionByName(string name) {
-      throw new NotImplementedException();
+    public TagDefinition GetTagDefinitionByName(string name) {
+      var tagdef = _dao.Query<TagDefinition>().FirstOrDefault(t => string.Compare(t.Name, name, StringComparison.OrdinalIgnoreCase) == 0);
+      return tagdef;
     }
 
     public IEnumerable<TagDefinition> GetTagDefinitions() {
-      throw new NotImplementedException();
+      var tagdefs = _dao.Query<TagDefinition>();
+      return tagdefs;
     }
 
-    public IEnumerable<TagDefinition> GetTagDefinitionById(long id) {
-      throw new NotImplementedException();
+    public TagDefinition GetTagDefinitionById(long id) {
+      var tagdef = _dao.Load<TagDefinition>(id);
+      return tagdef;
     }
 
     #endregion
