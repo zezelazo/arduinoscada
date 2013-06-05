@@ -1,1 +1,0 @@
-C:\Code\ArduinoScada\isct.arduinoscada.services.config\obj\Debug\isct.arduinoscada.services.config.csprojResolveAssemblyReference.cache
