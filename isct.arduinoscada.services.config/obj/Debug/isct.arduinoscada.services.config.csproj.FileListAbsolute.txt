@@ -1,0 +1,13 @@
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\obj\Debug\isct.arduinoscada.services.config.csprojResolveAssemblyReference.cache
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\isct.arduinoscada.services.config.dll
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\isct.arduinoscada.services.config.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\isct.arduinoscada.common.dll
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\Raven.Abstractions.dll
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\Raven.Client.Lightweight.dll
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\isct.arduinoscada.common.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\Raven.Abstractions.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\Raven.Abstractions.xml
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\Raven.Client.Lightweight.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\bin\Debug\Raven.Client.Lightweight.xml
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\obj\Debug\isct.arduinoscada.services.config.dll
+C:\Code\ArduinoScada\isct.arduinoscada.services.config\obj\Debug\isct.arduinoscada.services.config.pdb

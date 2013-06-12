@@ -1,0 +1,4 @@
+C:\Code\ArduinoScada\isct.arduinoscada.services.runtime\bin\Debug\isct.arduinoscada.services.runtime.dll
+C:\Code\ArduinoScada\isct.arduinoscada.services.runtime\bin\Debug\isct.arduinoscada.services.runtime.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.services.runtime\obj\Debug\isct.arduinoscada.services.runtime.dll
+C:\Code\ArduinoScada\isct.arduinoscada.services.runtime\obj\Debug\isct.arduinoscada.services.runtime.pdb

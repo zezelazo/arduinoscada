@@ -1,6 +1,6 @@
 ﻿namespace isct.arduinoscada.common.entities.runtime {
   public abstract class TagRecord<TType> : Entity<long> {
-    public TagRecord() {
+    protected TagRecord() {
       Quality = ETagQuality.Unknow;
     }
 

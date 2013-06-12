@@ -10,12 +10,10 @@ namespace isct.arduinoscada.services.config {
   internal class ConfigurationService : IConfigurationService {
     private readonly IDocumentSession _dao;
 
-    #region Constructor
-
+    #region Constructor     
     public ConfigurationService(IDocumentSession dao) {
       _dao = dao;
-    }
-
+    }     
     #endregion
 
     #region Implementation of IConfigurationService
@@ -26,7 +24,9 @@ namespace isct.arduinoscada.services.config {
     }
 
     public void UpdateServer(Server item) {
-      throw new NotImplementedException();
+      var element = _dao.Load<Server>(item.Id);
+      element = item;
+      _dao.SaveChanges();
     }
 
     public void DeleteServer(Server item) {
@@ -56,7 +56,9 @@ namespace isct.arduinoscada.services.config {
     }
 
     public void UpdateTagdefinition(TagDefinition item) {
-      throw new NotImplementedException();
+      var element = _dao.Load<TagDefinition>(item.Id);
+      element = item;
+      _dao.SaveChanges();      
     }
 
     public void DeleteTagdefinition(TagDefinition item) {

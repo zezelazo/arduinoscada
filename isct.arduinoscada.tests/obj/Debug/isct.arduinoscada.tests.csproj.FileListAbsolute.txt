@@ -1,0 +1,4 @@
+C:\Code\ArduinoScada\isct.arduinoscada.tests\bin\Debug\isct.arduinoscada.tests.exe
+C:\Code\ArduinoScada\isct.arduinoscada.tests\bin\Debug\isct.arduinoscada.tests.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.tests\obj\Debug\isct.arduinoscada.tests.exe
+C:\Code\ArduinoScada\isct.arduinoscada.tests\obj\Debug\isct.arduinoscada.tests.pdb

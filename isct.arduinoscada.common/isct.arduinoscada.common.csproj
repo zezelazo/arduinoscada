@@ -52,10 +52,18 @@
     <Compile Include="entities\Entity.cs" />
     <Compile Include="entities\runtime\AnalogRecord.cs" />
     <Compile Include="entities\runtime\DigitalRecord.cs" />
+    <Compile Include="entities\ETagQuality.cs" />
     <Compile Include="entities\runtime\TagRecord.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="services\common\ILog.cs" />
     <Compile Include="services\config\IConfigurationService.cs" />
     <Compile Include="services\config\IUserService.cs" />
+    <Compile Include="services\runtime\IBaseService.cs" />
+    <Compile Include="services\runtime\ICache.cs" />
+    <Compile Include="services\runtime\IComunication.cs" />
+    <Compile Include="services\runtime\IDataBase.cs" />
+    <Compile Include="services\runtime\IHmi.cs" />
+    <Compile Include="services\runtime\IServiceManager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

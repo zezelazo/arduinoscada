@@ -1,0 +1,5 @@
+C:\Code\ArduinoScada\isct.arduinoscada.web\bin\isct.arduinoscada.web.dll
+C:\Code\ArduinoScada\isct.arduinoscada.web\bin\isct.arduinoscada.web.pdb
+C:\Code\ArduinoScada\isct.arduinoscada.web\obj\Debug\isct.arduinoscada.web.csprojResolveAssemblyReference.cache
+C:\Code\ArduinoScada\isct.arduinoscada.web\obj\Debug\isct.arduinoscada.web.dll
+C:\Code\ArduinoScada\isct.arduinoscada.web\obj\Debug\isct.arduinoscada.web.pdb
