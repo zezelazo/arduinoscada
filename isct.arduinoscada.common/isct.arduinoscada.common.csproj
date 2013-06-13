@@ -39,6 +39,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="entities\BasicTag.cs" />
     <Compile Include="entities\config\EAlarmType.cs" />
     <Compile Include="entities\config\EAlarmTrigger.cs" />
     <Compile Include="entities\config\GenericProperty.cs" />
