@@ -1,22 +1,29 @@
-﻿using System.Collections.Generic;
-using isct.arduinoscada.common.entities.config;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
+using isct.arduinoscada.common.entities;
 
 namespace isct.arduinoscada.common.services.config {
   public interface IConfigurationService {
-    void CreateServer(Server item);
-    void UpdateServer(Server item);
-    void DeleteServer(Server item);
+    //User Management
+    IEnumerable<User> GetUsers(Expression<Func<bool, User>> filter = null);
+    User GetUser(int userId);
+    int CreateUser(User item);
+    void EditUser(User item);
+    void DeleteUser(User item);
 
-    Server GetServerByName(string name);
-    IEnumerable<Server> GetServers();
-    Server GetServerById(long id);
+    //TagManagement
+    IEnumerable<TagDef> GetTags(Expression<Func<bool, TagDef>> filter = null);
+    User GetTag(int tagId);
+    int CreateTag(TagDef item);
+    void EditTag(TagDef item);
+    void DeleteTag(TagDef item);
 
-    void CreateTagdefinition(TagDefinition item);
-    void UpdateTagdefinition(TagDefinition item);
-    void DeleteTagdefinition(TagDefinition item);
-
-    TagDefinition GetTagDefinitionByName(string name);
-    IEnumerable<TagDefinition> GetTagDefinitions();
-    TagDefinition GetTagDefinitionById(long id);
+    //DeviceManagent
+    IEnumerable<ArduinoDevice> GetDevices(Expression<Func<bool, ArduinoDevice>> filter = null);
+    User GetDevice(int deviceId);
+    int CreateDevice(ArduinoDevice item);
+    void EditDevice(ArduinoDevice item);
+    void DeleteDevice(ArduinoDevice item);
   }
 }

@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D386A66E-3635-499D-8936-5DE748F38F8F}</ProjectGuid>
+    <ProjectGuid>{8427A9DA-C826-4342-817F-77184FAE7D49}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>isct.arduinoscada.common</RootNamespace>
-    <AssemblyName>isct.arduinoscada.common</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>isct.arduinoscada.services</RootNamespace>
+    <AssemblyName>isct.arduinoscada.services</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -39,25 +39,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entities\ArduinoDevice.cs" />
-    <Compile Include="entities\EAlarmCompareOperator.cs" />
-    <Compile Include="entities\EConvertOperator.cs" />
-    <Compile Include="entities\EUserRol.cs" />
-    <Compile Include="entities\IAlarm.cs" />
-    <Compile Include="entities\IScaleTag.cs" />
-    <Compile Include="entities\RtTag.cs" />
-    <Compile Include="entities\TagDef.cs" />
-    <Compile Include="entities\TagExt.cs" />
-    <Compile Include="entities\User.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="services\common\ILog.cs" />
-    <Compile Include="services\config\IConfigurationService.cs" />
-    <Compile Include="services\runtime\IBaseService.cs" />
-    <Compile Include="services\runtime\ICache.cs" />
-    <Compile Include="services\runtime\IComunication.cs" />
-    <Compile Include="services\runtime\IDataBase.cs" />
-    <Compile Include="services\runtime\IHmi.cs" />
-    <Compile Include="services\runtime\IServiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\isct.arduinoscada.common\isct.arduinoscada.common.csproj">
+      <Project>{d386a66e-3635-499d-8936-5de748f38f8f}</Project>
+      <Name>isct.arduinoscada.common</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
