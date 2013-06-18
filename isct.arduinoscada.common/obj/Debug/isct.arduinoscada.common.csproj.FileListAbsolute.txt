@@ -1,5 +1,4 @@
-C:\Code\ArduinoScada\isct.arduinoscada.common\obj\Debug\isct.arduinoscada.common.csprojResolveAssemblyReference.cache
-C:\Code\ArduinoScada\isct.arduinoscada.common\bin\Debug\isct.arduinoscada.common.dll
-C:\Code\ArduinoScada\isct.arduinoscada.common\bin\Debug\isct.arduinoscada.common.pdb
-C:\Code\ArduinoScada\isct.arduinoscada.common\obj\Debug\isct.arduinoscada.common.dll
-C:\Code\ArduinoScada\isct.arduinoscada.common\obj\Debug\isct.arduinoscada.common.pdb
+C:\Code\arduinoscada\isct.arduinoscada.common\bin\Debug\isct.arduinoscada.common.dll
+C:\Code\arduinoscada\isct.arduinoscada.common\bin\Debug\isct.arduinoscada.common.pdb
+C:\Code\arduinoscada\isct.arduinoscada.common\obj\Debug\isct.arduinoscada.common.dll
+C:\Code\arduinoscada\isct.arduinoscada.common\obj\Debug\isct.arduinoscada.common.pdb
