@@ -6,8 +6,8 @@
       AlarmCompareOperator = EAlarmCompareOperator.Equal;
       ConvFactor = 0;
       ConvOperator = EConvertOperator.Multiplication;
-    }           
-    
+    }
+
     public string Description { get; set; }
     public string Label { get; set; }
     public bool CanRaiseAlarm { get; set; }

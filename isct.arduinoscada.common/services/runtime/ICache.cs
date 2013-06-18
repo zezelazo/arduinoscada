@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using isct.arduinoscada.common.entities;
 
 namespace isct.arduinoscada.common.services.runtime {
-  public interface ICache:IBaseService {
+  public interface ICache : IBaseService {
     int AddItem(long id, RtTag tag);
 
     void ClearItem(long id);
@@ -12,7 +12,7 @@ namespace isct.arduinoscada.common.services.runtime {
 
     RtTag GetOldestItem(long id);
 
-    IEnumerable<RtTag> GetAllItems(long id, int order);//1=ascend; 2= desc
+    IEnumerable<RtTag> GetAllItems(long id, int order); //1=ascend; 2= desc
 
     event EventHandler<EventArgs> NewValues;
   }
