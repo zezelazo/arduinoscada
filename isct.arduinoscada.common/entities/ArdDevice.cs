@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 namespace isct.arduinoscada.common.entities {
-  public class ArduinoDevice : IEntity {
+  public class ArdDevice : IEntity {
     public string Name { get; set; }
     public string Description { get; set; }
     public string BaseUrl { get; set; }

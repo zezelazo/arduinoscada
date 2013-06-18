@@ -46,20 +46,20 @@ namespace isct.arduinoscada.services.config {
       DeleteItem(item);
     }
 
-    public long CreateDevice(ArduinoDevice item) {
+    public long CreateDevice(ArdDevice item) {
       return StoreItem(item);
     }
 
-    public void EditDevice(ArduinoDevice item) {
+    public void EditDevice(ArdDevice item) {
       StoreItem(item);
     }
 
-    public void DeleteDevice(ArduinoDevice item) {
+    public void DeleteDevice(ArdDevice item) {
       DeleteItem(item);
     }
 
-    public IEnumerable<ArduinoDevice> GetDevices(Expression<Func<ArduinoDevice, bool>> filter = null) {
-      return _dao.Query<ArduinoDevice>().Where(GetFilterExpression(filter));
+    public IEnumerable<ArdDevice> GetDevices(Expression<Func<ArdDevice, bool>> filter = null) {
+      return _dao.Query<ArdDevice>().Where(GetFilterExpression(filter));
     }
 
     public IEnumerable<User> GetUsers(Expression<Func<User, bool>> filter = null) {
@@ -78,8 +78,8 @@ namespace isct.arduinoscada.services.config {
       return _dao.Load<TagDef>(tagId);
     }
 
-    public ArduinoDevice GetDevice(long deviceId) {
-      return _dao.Load<ArduinoDevice>(deviceId);
+    public ArdDevice GetDevice(long deviceId) {
+      return _dao.Load<ArdDevice>(deviceId);
     }
 
     #endregion

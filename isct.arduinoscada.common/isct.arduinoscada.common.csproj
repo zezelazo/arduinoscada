@@ -37,7 +37,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="entities\ArduinoDevice.cs" />
+    <Compile Include="entities\ArdDevice.cs" />
     <Compile Include="entities\EAlarmCompareOperator.cs" />
     <Compile Include="entities\EConvertOperator.cs" />
     <Compile Include="entities\EUserRol.cs" />

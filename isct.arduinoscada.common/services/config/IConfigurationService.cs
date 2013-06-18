@@ -20,10 +20,10 @@ namespace isct.arduinoscada.common.services.config {
     void DeleteTag(TagDef item);
 
     //DeviceManagent
-    IEnumerable<ArduinoDevice> GetDevices(Expression<Func<ArduinoDevice, bool>> filter = null);
-    ArduinoDevice GetDevice(long deviceId);
-    long CreateDevice(ArduinoDevice item);
-    void EditDevice(ArduinoDevice item);
-    void DeleteDevice(ArduinoDevice item);
+    IEnumerable<ArdDevice> GetDevices(Expression<Func<ArdDevice, bool>> filter = null);
+    ArdDevice GetDevice(long deviceId);
+    long CreateDevice(ArdDevice item);
+    void EditDevice(ArdDevice item);
+    void DeleteDevice(ArdDevice item);
   }
 }

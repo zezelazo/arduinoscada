@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.common", "isct.arduinoscada.common\isct.arduinoscada.common.csproj", "{D386A66E-3635-499D-8936-5DE748F38F8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.web", "isct.arduinoscada.web\isct.arduinoscada.web.csproj", "{6D08658A-6B70-4136-B542-BB31C2383E2F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.tests", "isct.arduinoscada.tests\isct.arduinoscada.tests.csproj", "{CA422C43-4A34-4613-92E1-8E4DA24451F7}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.services", "isct.arduinoscada.services\isct.arduinoscada.services.csproj", "{8427A9DA-C826-4342-817F-77184FAE7D49}"
@@ -16,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BB6B61
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.web", "isct.arduinoscada.web\isct.arduinoscada.web.csproj", "{5F097B8B-7533-40DF-81C8-B4757500D155}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,10 +26,6 @@ Global
 		{D386A66E-3635-499D-8936-5DE748F38F8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D386A66E-3635-499D-8936-5DE748F38F8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D386A66E-3635-499D-8936-5DE748F38F8F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6D08658A-6B70-4136-B542-BB31C2383E2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6D08658A-6B70-4136-B542-BB31C2383E2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6D08658A-6B70-4136-B542-BB31C2383E2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6D08658A-6B70-4136-B542-BB31C2383E2F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CA422C43-4A34-4613-92E1-8E4DA24451F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CA422C43-4A34-4613-92E1-8E4DA24451F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA422C43-4A34-4613-92E1-8E4DA24451F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,6 +34,10 @@ Global
 		{8427A9DA-C826-4342-817F-77184FAE7D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8427A9DA-C826-4342-817F-77184FAE7D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8427A9DA-C826-4342-817F-77184FAE7D49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F097B8B-7533-40DF-81C8-B4757500D155}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F097B8B-7533-40DF-81C8-B4757500D155}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F097B8B-7533-40DF-81C8-B4757500D155}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F097B8B-7533-40DF-81C8-B4757500D155}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -24,7 +24,7 @@ namespace isct.arduinoscada.tests.services {
       //Assert.AreEqual(oldOldItem.Id,nDeviceId);
       //Assert.AreEqual(oldOldItem.BaseUrl, "http://10.1.0.1/ServicioARDUINO");
 
-      var demoItem = new ArduinoDevice {Id = 33, Name = "XXXX", BaseUrl = "XXXX", Description = "XXXX", LastTimeOnline = null};
+      var demoItem = new ArdDevice {Id = 33, Name = "XXXX", BaseUrl = "XXXX", Description = "XXXX", LastTimeOnline = null};
       cfgService.EditDevice(demoItem);
     }
   }
