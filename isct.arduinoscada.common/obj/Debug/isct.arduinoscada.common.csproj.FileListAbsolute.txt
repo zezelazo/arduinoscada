@@ -1,4 +1,0 @@
-C:\Code\arduinoscada\isct.arduinoscada.common\bin\Debug\isct.arduinoscada.common.dll
-C:\Code\arduinoscada\isct.arduinoscada.common\bin\Debug\isct.arduinoscada.common.pdb
-C:\Code\arduinoscada\isct.arduinoscada.common\obj\Debug\isct.arduinoscada.common.dll
-C:\Code\arduinoscada\isct.arduinoscada.common\obj\Debug\isct.arduinoscada.common.pdb
