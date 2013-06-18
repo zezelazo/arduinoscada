@@ -50,7 +50,6 @@
     <Compile Include="entities\TagExt.cs" />
     <Compile Include="entities\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="services\common\ILog.cs" />
     <Compile Include="services\config\IConfigurationService.cs" />
     <Compile Include="services\runtime\IBaseService.cs" />
     <Compile Include="services\runtime\ICache.cs" />
@@ -58,6 +57,9 @@
     <Compile Include="services\runtime\IDataBase.cs" />
     <Compile Include="services\runtime\IHmi.cs" />
     <Compile Include="services\runtime\IServiceManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="services\common\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
