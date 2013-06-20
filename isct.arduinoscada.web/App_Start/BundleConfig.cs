@@ -5,6 +5,7 @@ namespace isct.arduinoscada.web.App_Start {
     public class BundleConfig {
         public static void RegisterBundles(BundleCollection bundles) {
             bundles.IgnoreList.Clear();
+
             AddDefaultIgnorePatterns(bundles.IgnoreList);
 
             bundles.Add(new ScriptBundle("~/scripts/modernizr")
