@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using NLog;
 using Raven.Client;
 using Raven.Client.Linq;
@@ -8,13 +9,13 @@ using isct.arduinoscada.common.entities;
 using isct.arduinoscada.common.services.config;
 
 namespace isct.arduinoscada.services.config {
-  public class ConfigurationService : IConfigurationService {
+  public class ConfigurationService : IConfigurationService, IDisposable {
     private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
-    private readonly IDocumentSession _dao;
+    private readonly IAsyncDocumentSession _dao;
 
     #region Constructor
 
-    public ConfigurationService(IDocumentSession dao) {
+    public ConfigurationService(IAsyncDocumentSession dao) {
       _dao = dao;
     }
 
@@ -22,64 +23,70 @@ namespace isct.arduinoscada.services.config {
 
     #region Implementation of IConfigurationService
 
-    public long CreateUser(User item) {
-      return StoreItem(item);
+    public async Task<long> CreateUser(User item) {
+      var result = await StoreItem(item);
+      return result;
     }
 
-    public void EditUser(User item) {
-      StoreItem(item);
+    public async void EditUser(User item) {
+      await StoreItem(item);
     }
 
     public void DeleteUser(User item) {
       DeleteItem(item);
     }
 
-    public long CreateTag(TagDef item) {
-      return StoreItem(item);
+    public async Task<long> CreateTag(TagDef item) {
+      var result = await StoreItem(item);
+      return result;
     }
 
-    public void EditTag(TagDef item) {
-      StoreItem(item);
+    public async void EditTag(TagDef item) {
+      await StoreItem(item);
     }
 
     public void DeleteTag(TagDef item) {
       DeleteItem(item);
     }
 
-    public long CreateDevice(ArdDevice item) {
-      return StoreItem(item);
+    public async Task<long> CreateDevice(ArdDevice item) {
+      var result = await StoreItem(item);
+      return result;
     }
 
-    public void EditDevice(ArdDevice item) {
-      StoreItem(item);
+    public async void EditDevice(ArdDevice item) {
+      await StoreItem(item);
     }
 
     public void DeleteDevice(ArdDevice item) {
       DeleteItem(item);
     }
 
-    public IEnumerable<ArdDevice> GetDevices(Expression<Func<ArdDevice, bool>> filter = null) {
-      return _dao.Query<ArdDevice>().Where(GetFilterExpression(filter));
+    public Task<IList<ArdDevice>> GetDevices(Expression<Func<ArdDevice, bool>> filter = null) {
+      return _dao.Query<ArdDevice>().Where(GetFilterExpression(filter)).ToListAsync();
     }
 
-    public IEnumerable<User> GetUsers(Expression<Func<User, bool>> filter = null) {
-      return _dao.Query<User>().Where(GetFilterExpression(filter));
+    public Task<IList<User>> GetUsers(Expression<Func<User, bool>> filter = null) {
+      return _dao.Query<User>().Where(GetFilterExpression(filter)).ToListAsync();
     }
 
-    public IEnumerable<TagDef> GetTags(Expression<Func<TagDef, bool>> filter = null) {
-      return _dao.Query<TagDef>().Where(GetFilterExpression(filter));
+    public Task<IList<TagDef>> GetTags(Expression<Func<TagDef, bool>> filter = null) {
+      return _dao.Query<TagDef>().Where(GetFilterExpression(filter)).ToListAsync();
     }
 
-    public User GetUser(long userId) {
-      return _dao.Load<User>(userId);
+    public async Task<User> GetUser(long userId) {
+      var result = await _dao.LoadAsync<User>(userId);
+      return result;
     }
 
-    public TagDef GetTag(long tagId) {
-      return _dao.Load<TagDef>(tagId);
+    public async Task<TagDef> GetTag(long tagId) {
+      var result = await _dao.LoadAsync<TagDef>(tagId);
+      return result;
     }
 
-    public ArdDevice GetDevice(long deviceId) {
-      return _dao.Load<ArdDevice>(deviceId);
+    public async Task<ArdDevice> GetDevice(long deviceId) {
+      var result = await _dao.LoadAsync<ArdDevice>(deviceId);
+      return result;
     }
 
     #endregion
@@ -88,24 +95,32 @@ namespace isct.arduinoscada.services.config {
       return filter ?? (_ => true);
     }
 
-    private void DeleteItem<T>(T item) where T : IEntity {
+    private async void DeleteItem<T>(T item) where T : IEntity {
       try {
         _dao.Delete(item);
-        _dao.SaveChanges();
+        await _dao.SaveChangesAsync();
       } catch(Exception e) {
         Logger.ErrorException(e.Message, e);
       }
     }
 
-    private long StoreItem<T>(T item) where T : IEntity {
+    private async Task<long> StoreItem<T>(T item) where T : IEntity {
       try {
-        _dao.Store(item);
-        _dao.SaveChanges();
+        await _dao.StoreAsync(item);
+        await _dao.SaveChangesAsync();
         return item.Id;
       } catch(Exception e) {
         Logger.ErrorException(e.Message, e);
         return 0;
       }
     }
+
+    #region Implementation of IDisposable
+
+    public void Dispose() {
+      _dao.Dispose();
+    }
+
+    #endregion
   }
 }

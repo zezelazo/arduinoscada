@@ -1,22 +1,26 @@
 ﻿using System.Collections.Generic;
-using System.Web.Http;
+using System.Net;
+using System.Net.Http;
+using System.Threading.Tasks;
 using isct.arduinoscada.common.entities;
-using isct.arduinoscada.common.services.config;
 
 namespace isct.arduinoscada.web.Controllers {
-    public class UsersController : ApiController {
-        private readonly IConfigurationService _service;
-
-        public UsersController(IConfigurationService service) {
-            _service = service;
-        }
-
-        public IEnumerable<User> Get() {
-            return _service.GetUsers();
-        }
-
-        public User Get(long userId) {
-            return _service.GetUser(userId);
-        }
+  public class UsersController : BaseController {
+    public Task<IList<User>> Get() {
+      return Service.GetUsers();
     }
+
+    public Task<User> Get(long userId) {
+      return Service.GetUser(userId);
+    }
+
+    public void Put(User item) {
+      Service.EditUser(item);
+    }
+
+    public async Task<HttpResponseMessage> Post(User item) {
+      var id = await Service.CreateUser(item);
+      return Request.CreateResponse(HttpStatusCode.Accepted, id);
+    }
+  }
 }

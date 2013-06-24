@@ -13,6 +13,7 @@
     public bool IsDigital { get; set; }
     public bool IsInternal { get; set; }
     public TagExt ExtraDetails { get; set; }
+    public long DeviceId { get; set; }
     public long Id { get; set; }
   }
 }

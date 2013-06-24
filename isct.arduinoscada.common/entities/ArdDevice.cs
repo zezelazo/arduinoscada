@@ -8,7 +8,6 @@ namespace isct.arduinoscada.common.entities {
     public string BaseUrl { get; set; }
     public DateTime? LastTimeOnline { get; set; }
 
-    public ICollection<TagDef> Tags { get; set; }
     public long Id { get; set; }
   }
 }

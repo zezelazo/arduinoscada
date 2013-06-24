@@ -1,28 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using System.Threading.Tasks;
 using isct.arduinoscada.common.entities;
 
 namespace isct.arduinoscada.common.services.config {
-  public interface IConfigurationService {
+  public interface IConfigurationService : IDisposable {
     //User Management
-    IEnumerable<User> GetUsers(Expression<Func<User, bool>> filter = null);
-    User GetUser(long userId);
-    long CreateUser(User item);
+    Task<IList<User>> GetUsers(Expression<Func<User, bool>> filter = null);
+    Task<User> GetUser(long userId);
+    Task<long> CreateUser(User item);
     void EditUser(User item);
     void DeleteUser(User item);
 
     //TagManagement
-    IEnumerable<TagDef> GetTags(Expression<Func<TagDef, bool>> filter = null);
-    TagDef GetTag(long tagId);
-    long CreateTag(TagDef item);
+    Task<IList<TagDef>> GetTags(Expression<Func<TagDef, bool>> filter = null);
+    Task<TagDef> GetTag(long tagId);
+    Task<long> CreateTag(TagDef item);
     void EditTag(TagDef item);
     void DeleteTag(TagDef item);
 
     //DeviceManagent
-    IEnumerable<ArdDevice> GetDevices(Expression<Func<ArdDevice, bool>> filter = null);
-    ArdDevice GetDevice(long deviceId);
-    long CreateDevice(ArdDevice item);
+    Task<IList<ArdDevice>> GetDevices(Expression<Func<ArdDevice, bool>> filter = null);
+    Task<ArdDevice> GetDevice(long deviceId);
+    Task<long> CreateDevice(ArdDevice item);
     void EditDevice(ArdDevice item);
     void DeleteDevice(ArdDevice item);
   }
