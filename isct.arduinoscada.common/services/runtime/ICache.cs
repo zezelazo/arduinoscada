@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using isct.arduinoscada.common.entities;
 
 namespace isct.arduinoscada.common.services.runtime {
-  public interface ICache : IBaseService {
+  public interface ICache : IBaseRtService {
     int AddItem(long id, RtTag tag);
 
     void ClearItem(long id);
