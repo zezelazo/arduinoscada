@@ -1,0 +1,53 @@
+﻿<navigation:Page x:Class="isct.arduinoscada.app.Views.Config"
+                 Title="Configuracion"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:navigation="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Navigation"
+                 mc:Ignorable="d"
+                 d:DesignWidth="640" d:DesignHeight="480"
+                 Style="{StaticResource PageStyle}">
+  <Grid x:Name="LayoutRoot">
+    <ScrollViewer x:Name="PageScrollViewer" Style="{StaticResource PageScrollViewerStyle}">
+      <Grid x:Name="ContentPanel">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="55" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="HeaderText" Grid.Row="0" Style="{StaticResource HeaderTextStyle}" Text="Configuracion" />
+        <Grid Grid.Row="1">
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="3*" />
+            <ColumnDefinition Width="6*" />
+          </Grid.ColumnDefinitions>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+          </Grid.RowDefinitions>
+          <ListBox Grid.Row="1" Margin ="2">
+            <TextBlock Text="Sistema" />
+            <TextBlock Text="Usuarios" />
+            <TextBlock Text="Dispositivos" />
+            <TextBlock Text="Elementos" />
+          </ListBox>
+          <StackPanel Orientation="Vertical" Grid.Row="1" Grid.Column="1" Margin ="2">
+            <Grid>
+              <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="45" />
+              </Grid.ColumnDefinitions>
+              <TextBox Text="Search" Grid.Column="0" Margin="3,1" />
+              <Button Content="Buscar" Grid.Column="1" Margin="3,1" />
+            </Grid>
+            <ListBox x:Name="Elements" Margin="2">
+            </ListBox>
+          </StackPanel>
+          <ContentControl Grid.Row="1" Grid.Column="2" x:Name="Editor" Margin ="2">
+          </ContentControl>
+        </Grid>
+      </Grid>
+    </ScrollViewer>
+  </Grid>
+</navigation:Page>

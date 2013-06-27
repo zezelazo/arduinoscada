@@ -16,6 +16,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BB6B61
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.web", "isct.arduinoscada.web\isct.arduinoscada.web.csproj", "{5F097B8B-7533-40DF-81C8-B4757500D155}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.app", "isct.arduinoscada.app\isct.arduinoscada.app.csproj", "{73DB0B01-D1F3-4684-A5C9-0B9697E476EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.apphost", "isct.arduinoscada.apphost\isct.arduinoscada.apphost.csproj", "{3524B6CB-FE00-4A4E-8CD1-C674E0101734}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "isct.arduinoscada.host", "isct.arduinoscada.host\isct.arduinoscada.host.csproj", "{D3FF9FB0-C7A4-4D5E-955C-22F4A84A16A1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,6 +44,18 @@ Global
 		{5F097B8B-7533-40DF-81C8-B4757500D155}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5F097B8B-7533-40DF-81C8-B4757500D155}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5F097B8B-7533-40DF-81C8-B4757500D155}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73DB0B01-D1F3-4684-A5C9-0B9697E476EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73DB0B01-D1F3-4684-A5C9-0B9697E476EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73DB0B01-D1F3-4684-A5C9-0B9697E476EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73DB0B01-D1F3-4684-A5C9-0B9697E476EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3524B6CB-FE00-4A4E-8CD1-C674E0101734}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3524B6CB-FE00-4A4E-8CD1-C674E0101734}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3524B6CB-FE00-4A4E-8CD1-C674E0101734}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3524B6CB-FE00-4A4E-8CD1-C674E0101734}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3FF9FB0-C7A4-4D5E-955C-22F4A84A16A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3FF9FB0-C7A4-4D5E-955C-22F4A84A16A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3FF9FB0-C7A4-4D5E-955C-22F4A84A16A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3FF9FB0-C7A4-4D5E-955C-22F4A84A16A1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
