@@ -53,7 +53,7 @@
     <Compile Include="services\runtime\IBaseRtService.cs" />
     <Compile Include="services\runtime\ICache.cs" />
     <Compile Include="services\runtime\IComunication.cs" />
-    <Compile Include="services\runtime\IDataBase.cs" />
+    <Compile Include="services\runtime\IDatabase.cs" />
     <Compile Include="services\runtime\IHmi.cs" />
     <Compile Include="services\runtime\IServiceManager.cs" />
   </ItemGroup>

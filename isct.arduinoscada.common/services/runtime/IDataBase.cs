@@ -1,11 +1,12 @@
-﻿using isct.arduinoscada.common.entities;
+﻿using System.Threading.Tasks;
+using isct.arduinoscada.common.entities;
 
 namespace isct.arduinoscada.common.services.runtime {
-  public interface IDataBase : IBaseRtService {
+  public interface IDatabase : IBaseRtService {
     void Init();
-    RtTag GetTag(long id);
+    Task<RtTag> GetTag(long id);
     void UpdateTag(RtTag item);
     
-    TagDef GetTagDef(long id);
+    Task<TagDef> GetTagDef(long id);
   }
 }
